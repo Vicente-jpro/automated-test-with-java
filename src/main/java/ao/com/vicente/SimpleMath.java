@@ -7,7 +7,7 @@ public class SimpleMath {
 	}
 
 	public static Double soma(Double n1, Double n2) {
-		return n1 + n2;
+		return n1 + n2;	
 	}
 
 	public static Double multipicacao(Double n1, Double n2) {
@@ -15,6 +15,8 @@ public class SimpleMath {
 	}
 
 	public static Double divisao(Double n1, Double n2) {
+		if(n2.equals(0D))
+			throw new ArithmeticException();
 		return n1 / n2;
 	}
 
