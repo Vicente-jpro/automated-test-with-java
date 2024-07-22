@@ -18,27 +18,8 @@ class FolderTest {
 
 	Double n1 = 4D;
 	Double n2 = 4D;
-	
-
-	Double n3 = 0D;
-	Double n4 = 0D;
-	
-	@BeforeAll
-	static void setup() {
-		System.out.println("Running @BeforeAllv method.");
 		
-	}
-	
-	@AfterAll
-	static void clean() {
-		System.out.println("Running @BeforeAllv method.");
-	}
-	
-	@AfterEach
-	void method() {
-		System.out.println("Running @AfterEach method.");
-	}
-	
+
 	
 	//@Disabled("The reason that make you desable the test.")
 	@Test
@@ -62,10 +43,14 @@ class FolderTest {
 		
 		Double numeroDouble = 4D;
 		Double num = 0D;
-	
-		assertThrows(ArithmeticException.class, ()->{
+		
+		String expected = "Impossible divide by zero!";
+		
+		ArithmeticException result = assertThrows(ArithmeticException.class, ()->{
 			 SimpleMath.divisao(numeroDouble, num);
 		});
+		
+		assertEquals(result.getMessage(), expected);
 	}
 	
 	

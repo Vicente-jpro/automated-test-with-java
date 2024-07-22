@@ -16,7 +16,7 @@ public class SimpleMath {
 
 	public static Double divisao(Double n1, Double n2) {
 		if(n2.equals(0D))
-			throw new ArithmeticException();
+			throw new ArithmeticException("Impossible divide by zero!");
 		return n1 / n2;
 	}
 
