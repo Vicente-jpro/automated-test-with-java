@@ -6,7 +6,8 @@ import java.util.List;
 
 import ao.com.vicente.services.CourseService;
 
-//Usado para inicializar os objectos.
+//Usado para inicializar os o
+bjectos.
 public class CourseServiceStub implements CourseService{
 
 	@Override
@@ -19,7 +20,7 @@ public class CourseServiceStub implements CourseService{
 	 			listElementos.add(str);
 	 	}
 	 	
-	 	return listElementos;
+	 	return listElementos; 
 	 	
 	}
 
