@@ -7,7 +7,6 @@ import java.util.List;
 import ao.com.vicente.services.CourseService;
 
 //Usado para inicializar os o
-bjectos.
 public class CourseServiceStub implements CourseService{
 
 	@Override

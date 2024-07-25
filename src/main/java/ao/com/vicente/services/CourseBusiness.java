@@ -1,8 +1,7 @@
 package ao.com.vicente.services;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // SUT - System (method) Under Test
 public class CourseBusiness {
@@ -17,7 +16,9 @@ public class CourseBusiness {
     
         List<String> allCourses = courseService.retriveCourses(student);
        
-        return allCourses;
+        return allCourses.stream()
+        				 .filter( ele -> ele.contains(student))
+        				 .collect(Collectors.toList());
     }
 
     
