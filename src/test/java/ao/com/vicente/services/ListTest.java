@@ -1,7 +1,7 @@
 package ao.com.vicente.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -35,6 +35,17 @@ class ListTest {
 		List<String> lista = mock(List.class);
 		when(lista.get(0))
 		.thenReturn("Vicente");
+		
+		assertEquals("Vicente", lista.get(0));
 	}
 
+	@Test
+	@DisplayName("It shoud return exception (using mock)")
+	void it_should_return_exception() {
+		List<String> lista = mock(List.class);
+		
+		when(lista.get(-1)).thenThrow(IndexOutOfBoundsException.class);
+		
+		assertThrows(IndexOutOfBoundsException.class,  () -> lista.get(-1));
+	}
 }

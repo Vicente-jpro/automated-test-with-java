@@ -29,6 +29,9 @@ class CourseServiceMockTest {
 		filteredCourses = Arrays.asList("Java Spring Vicente", "Ruby", "Rust", "C#", "Spring");
 	} 
 	
+	
+
+	
 	@Test
 	@DisplayName("It should get related course that contains Spring.")
 	void coursesRelatedToSpring() {
