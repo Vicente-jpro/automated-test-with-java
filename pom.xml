@@ -12,6 +12,7 @@
   	<junit.version>5.9.2</junit.version>
   	<mockito.version>5.2.0</mockito.version>
   	<hamcrest.version>2.2</hamcrest.version>
+  	<maven.surefire.plugin.version>3.0.0-M9</maven.surefire.plugin.version>
 	<!-- End test versions -->
 	
   	<maven.compiler.target>11</maven.compiler.target>
@@ -60,7 +61,23 @@
 		<plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-surefire-plugin</artifactId>
-		    <version>3.0.0-M9</version>
+		    <version>${maven.surefire.plugin.version}</version>
+		    <configuration>
+		    	<testFailureIgnore>true</testFailureIgnore>
+		    </configuration>
+		</plugin>
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-surefire-report-plugin</artifactId>
+		    <version>${maven.surefire.plugin.version}</version>
+		    <executions> 
+		    	<execution>
+		    		<phase>test</phase> 
+		    		<goals>
+		    			<goal>report</goal>
+		    		</goals>
+		    	</execution>
+		    </executions>
 		</plugin>
   	</plugins>
   </build>

@@ -19,7 +19,7 @@ class CourseServiceMockTest {
 	CourseService mockCourseService;
 	CourseBusiness courseBusiness;
 	List<String> filteredCourses;
-	List<String> courses;
+
 	
 	@BeforeEach
 	void setup() {
@@ -65,18 +65,24 @@ class CourseServiceMockTest {
 		expected = 0;
 		assertEquals(result, expected);
 	}
-/*
+	/*
 	@Test
 	@DisplayName("It should delete a courses related to Spring")
 	void deleteCoursesRelatedToSpring() {
 		when(
 				mockCourseService.retriveCourses("Spring")
 			)
-		.thenReturn(courses);
+		.thenReturn(filteredCourses);
 		
 		courseBusiness.deleteCoursesRelatedToSpring("Vicente");
 		
 		verify(mockCourseService).delete("Rust");
 	}
+	
+	
+	
 	*/
+	
+	
+
 }

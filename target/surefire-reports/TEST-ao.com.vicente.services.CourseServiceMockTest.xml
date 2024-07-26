@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ao.com.vicente.FolderTest" time="0.108" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ao.com.vicente.services.CourseServiceMockTest" time="1.616" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,24 +62,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="itShouldDividTwoNumbers" classname="ao.com.vicente.FolderTest" time="0.052">
-    <system-out><![CDATA[3
-]]></system-out>
-  </testcase>
-  <testcase name="itShouldRunArithmeticExceptionSumTwoNumbers" classname="ao.com.vicente.FolderTest" time="0.003">
-    <system-out><![CDATA[1
-]]></system-out>
-  </testcase>
-  <testcase name="itShouldGetTheRestOfDivisionOfTwoNumbers" classname="ao.com.vicente.FolderTest" time="0.002">
-    <system-out><![CDATA[4
-]]></system-out>
-  </testcase>
-  <testcase name="itShouldSumTwoNumbers" classname="ao.com.vicente.FolderTest" time="0.001">
-    <system-out><![CDATA[1
-]]></system-out>
-  </testcase>
-  <testcase name="itShouldMultiplyTwoNumbers" classname="ao.com.vicente.FolderTest" time="0.001">
-    <system-out><![CDATA[2
-]]></system-out>
-  </testcase>
+  <testcase name="coursesRelatedToSpring" classname="ao.com.vicente.services.CourseServiceMockTest" time="1.613"/>
 </testsuite>

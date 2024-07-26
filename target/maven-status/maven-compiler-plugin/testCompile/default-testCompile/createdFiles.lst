@@ -1,2 +1,5 @@
+ao\com\vicente\services\CourseBusinessTest.class
+ao\com\vicente\stubs\CourseServiceStub.class
+ao\com\vicente\services\CourseServiceMockTest.class
 ao\com\vicente\FolderTest.class
-ao\com\vicente\TetClass.class
+ao\com\vicente\services\ListTest.class
