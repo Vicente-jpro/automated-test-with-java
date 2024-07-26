@@ -21,5 +21,17 @@ public class CourseBusiness {
         				 .collect(Collectors.toList());
     }
 
+    public void deleteCoursesRelatedToSpring(String student) {
+        
+        List<String> allCourses = courseService.retriveCourses(student);
+       
+        allCourses.stream()	
+        		  .forEach( course -> {
+        			if(course.contains(student))
+        				allCourses.remove(course);
+        			
+        });
+        
+    }
     
 }

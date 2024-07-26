@@ -29,8 +29,20 @@ class CourseServiceMockTest {
 		filteredCourses = Arrays.asList("Java Spring Vicente", "Ruby", "Rust", "C#", "Spring");
 	} 
 	
+	/*
+	@Test
+	@DisplayName("It should delete a courses related to Spring")
+	void deleteCoursesRelatedToSpring() {
+	mockObject = mock(Object.class);
 	
-
+		when(
+				mockObject.method()
+			)
+		.then(
+			mockObject // Iniciatizer
+		)
+	}
+*/
 	
 	@Test
 	@DisplayName("It should get related course that contains Spring.")
@@ -52,4 +64,12 @@ class CourseServiceMockTest {
 		assertEquals(result, expected);
 	}
 
+	@Test
+	@DisplayName("It should delete a courses related to Spring")
+	void deleteCoursesRelatedToSpring() {
+		when(
+				mockCourseService.retriveCourses("Spring")
+			)
+		.thenReturn(filteredCourses);
+	}
 }
