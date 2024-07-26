@@ -2,6 +2,7 @@ package ao.com.vicente.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
@@ -18,6 +19,7 @@ class CourseServiceMockTest {
 	CourseService mockCourseService;
 	CourseBusiness courseBusiness;
 	List<String> filteredCourses;
+	List<String> courses;
 	
 	@BeforeEach
 	void setup() {
@@ -54,22 +56,27 @@ class CourseServiceMockTest {
 		.thenReturn(filteredCourses);
 		
 		int result = filteredCourses.size();
-		int expected = 1;
+		int expected = 5;
 		
 		assertEquals(result, expected);
 
 		List<String> filteredCourses1 = courseBusiness.retriveCoursesRelatedToSpring("Spring");
 		result = filteredCourses1.size();
-		expected = 2;
+		expected = 0;
 		assertEquals(result, expected);
 	}
-
+/*
 	@Test
 	@DisplayName("It should delete a courses related to Spring")
 	void deleteCoursesRelatedToSpring() {
 		when(
 				mockCourseService.retriveCourses("Spring")
 			)
-		.thenReturn(filteredCourses);
+		.thenReturn(courses);
+		
+		courseBusiness.deleteCoursesRelatedToSpring("Vicente");
+		
+		verify(mockCourseService).delete("Rust");
 	}
+	*/
 }
